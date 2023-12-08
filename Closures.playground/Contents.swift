@@ -69,17 +69,44 @@ customAdd(
 }
 
 
+/////
+///
+///
+
+let ages = [30,20,19,40]
+
+ages.sorted(by:{$0 < $1})
+
+
+ages.sorted(by: < )
+ages.sorted(by: > )
 
 
 
 
 
+///
+///
+///
+///
+func add10To(value:Int)->Int{
+    value + 10
+}
+
+func add20To(value:Int)->Int{
+    value + 20
+}
+
+func doAddition(
+    on value: Int,
+    using function: (Int) -> Int
+) -> Int{
+    function(value)
+}
 
 
-
-
-
-
+doAddition(on: 20, using: add10To(value:))
+doAddition(on: 20, using: add20To(value:))
 
 
 
